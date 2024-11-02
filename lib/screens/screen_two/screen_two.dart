@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:new_api_project/screens/card_settings/card_settings.dart';
 import 'package:new_api_project/screens/cart_list_screen/cart_list_screen.dart';
 import 'package:new_api_project/screens/screen_two/screen_two_controller.dart';
 import 'package:new_api_project/widgets/container_widget.dart';
@@ -35,13 +36,18 @@ class ScreenTwo extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          CircleAvatar(
-                            radius: 30,
-                            backgroundImage:
-                                AssetImage('assets/images/boy_image.jpg'),
+                          GestureDetector(
+                            onTap: () {
+                              Get.to(() => CardSettings());
+                            },
+                            child: const CircleAvatar(
+                              radius: 30,
+                              backgroundImage:
+                                  AssetImage('assets/images/boy_image.jpg'),
+                            ),
                           ),
-                          SizedBox(width: 5),
-                          Column(
+                          const SizedBox(width: 5),
+                          const Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
@@ -56,18 +62,18 @@ class ScreenTwo extends StatelessWidget {
                               )
                             ],
                           ),
-                          Spacer(),
-                          Icon(
+                          const Spacer(),
+                          const Icon(
                             size: 30,
                             Icons.favorite,
                             color: Colors.orange,
                           ),
-                          SizedBox(width: 20),
+                          const SizedBox(width: 20),
                           GestureDetector(
                             onTap: () {
                               Get.to(() => CartListScreen());
                             },
-                            child: Icon(
+                            child: const Icon(
                               Icons.shopping_cart,
                               size: 30,
                             ),
@@ -84,7 +90,7 @@ class ScreenTwo extends StatelessWidget {
                         style: const TextStyle(color: Colors.black),
                         decoration: const InputDecoration(
                           prefixIcon: Icon(Icons.search),
-                          hintText: 'Search Country',
+                          hintText: 'Search Category',
                           hintStyle: TextStyle(color: Colors.black54),
                           enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.all(

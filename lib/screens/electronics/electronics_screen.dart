@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:new_api_project/screens/electronics/slectronics_screen_controller.dart';
-import 'package:new_api_project/screens/mens_clothing_screen/mens_clothing_controller.dart';
+import 'package:new_api_project/screens/electronics/electronics_screen_controller.dart';
 import 'package:new_api_project/widgets/app_cache_image.dart';
 import 'package:new_api_project/widgets/rich_text_widget.dart';
 
@@ -104,7 +103,7 @@ class ElectronicScreen extends StatelessWidget {
                             child: Row(
                               children: [
                                 const Icon(
-                                  Icons.favorite,
+                                  Icons.star,
                                   size: 20,
                                   color: Colors.orangeAccent,
                                 ),

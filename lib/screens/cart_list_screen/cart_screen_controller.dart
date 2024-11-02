@@ -6,6 +6,7 @@ import 'package:http/http.dart' as http;
 
 class CartListScreenController extends GetxController {
   final List<CartModel> cartList2 = [];
+  bool isLoading = false;
 
   Future<List<CartModel>> getCartList() async {
     final response =
@@ -16,6 +17,7 @@ class CartListScreenController extends GetxController {
         cartList2.add(CartModel.fromJson(i));
         update();
       }
+      return cartList2;
     } else {
       throw Exception('Status Code error');
     }

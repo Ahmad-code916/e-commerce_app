@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:new_api_project/screens/item_view_screen/item_view_controller.dart';
+import 'package:new_api_project/screens/screen_two/screen_two.dart';
+import 'package:new_api_project/services/stripe_services.dart';
 
 class ItemViewScreen extends StatelessWidget {
   ItemViewScreen({
@@ -115,6 +117,28 @@ class ItemViewScreen extends StatelessWidget {
                                   fontSize: 20, fontWeight: FontWeight.w700),
                             ),
                           ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 16),
+                            child: Align(
+                                alignment: Alignment.centerRight,
+                                child: GestureDetector(
+                                  onTap: () {
+                                    StripeServices.instance.makePayment(10);
+                                  },
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 5),
+                                    decoration: BoxDecoration(
+                                        color: Colors.tealAccent,
+                                        borderRadius: BorderRadius.circular(2)),
+                                    child: const Text(
+                                      'Buy',
+                                      style: TextStyle(fontSize: 18),
+                                    ),
+                                  ),
+                                )),
+                          ),
+                          const SizedBox(height: 20),
                         ],
                       ),
                     ),
