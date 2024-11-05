@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "165794199322",
+    "project_id": "heartz-aee4c",
+    "storage_bucket": "heartz-aee4c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165794199322:android:d6e997ac9e6991e73e9ea3",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3jJKlXMqvzEL3lKklTa6pRZMfSmD3gHk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -123,7 +123,7 @@ class ItemViewScreen extends StatelessWidget {
                                 alignment: Alignment.centerRight,
                                 child: GestureDetector(
                                   onTap: () {
-                                    StripeServices.instance.makePayment(10);
+                                    StripeServices.instance.makePayment('20');
                                   },
                                   child: Container(
                                     padding: const EdgeInsets.symmetric(
